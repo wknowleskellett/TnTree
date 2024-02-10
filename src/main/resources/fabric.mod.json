@@ -16,13 +16,13 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"dev.williamknowleskellett.tntree.Tntree"
+			"dev.williamknowleskellett.tntree.TnTreeMod"
 		],
 		"client": [
-			"dev.williamknowleskellett.tntree.TntreeClient"
+			"dev.williamknowleskellett.tntree.TnTreeClientMod"
 		],
 		"fabric-datagen": [
-			"dev.williamknowleskellett.tntree.TntreeDataGenerator"
+			"dev.williamknowleskellett.tntree.TnTreeDataGenerator"
 		]
 	},
 	"mixins": [
