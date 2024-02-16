@@ -1,5 +1,7 @@
-package dev.williamknowleskellett.tntree;
+package dev.williamknowleskellett.tntree.world;
 
+import dev.williamknowleskellett.tntree.TnTreeMod;
+import dev.williamknowleskellett.tntree.world.tree.custom.TnTreeFoliagePlacer;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -29,10 +31,10 @@ public class ModConfiguredFeatures {
 
         register(context,
                 TNTREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
-                        BlockStateProvider.of(Blocks.ANCIENT_DEBRIS),
+                        BlockStateProvider.of(Blocks.OAK_LOG),
                         new StraightTrunkPlacer(5, 6, 3),
-                        BlockStateProvider.of(Blocks.BLUE_CONCRETE),
-                        new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 4),
+                        BlockStateProvider.of(Blocks.OAK_LEAVES),
+                        new TnTreeFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 4),
                         new TwoLayersFeatureSize(1, 0, 2)).build());
 
         // register(context, DOGWOOD_SPAWN_KEY, Feature.RANDOM_SELECTOR,

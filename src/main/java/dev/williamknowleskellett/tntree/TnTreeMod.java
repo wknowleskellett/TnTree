@@ -1,5 +1,8 @@
 package dev.williamknowleskellett.tntree;
 
+import dev.williamknowleskellett.tntree.blocks.ModBlocks;
+import dev.williamknowleskellett.tntree.world.ModPlacedFeatures;
+import dev.williamknowleskellett.tntree.world.tree.ModFoliagePlacerTypes;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
@@ -19,14 +22,13 @@ public class TnTreeMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
+		ModBlocks.registerModBlocks();
+		ModFoliagePlacerTypes.register();
 
-		BiomeModifications.addFeature(
-				BiomeSelectors.foundInOverworld(),
-				GenerationStep.Feature.VEGETAL_DECORATION,
-				RegistryKey.of(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures.TNTREE_PLACED_ID));
+//		BiomeModifications.addFeature(
+//				BiomeSelectors.foundInOverworld(),
+//				GenerationStep.Feature.VEGETAL_DECORATION,
+//				RegistryKey.of(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures.TNTREE_PLACED_ID));
 
 		
         // BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.TNTREE_PLACED_KEY);
